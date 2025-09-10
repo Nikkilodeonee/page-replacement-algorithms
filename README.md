@@ -74,28 +74,6 @@ You can adjust:
 - **Locality factor**  
 - **Repetitions** for averaging  
 
-Example:
-```python
-lengths = [50, 100, 150, 200, 250]
-x, fifo, mfu = run_experiment(lengths, fixed_param=0.6, param_type="length")
-```
-
----
-
-## Example Results
-
-From experiments with **sequence length = 200**, **frames = 3**, **locality = 0.6**:
-
-| Setting              | FIFO (page faults) | MFU (page faults) |
-|-----------------------|---------------------|-------------------|
-| Length = 200         | 97                  | 112               |
-| Frames = 3           | 100                 | 110               |
-| Locality = 0.7       | 86                  | 102               |
-
-### Example Output  
-Generated with Matplotlib:  
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/example-fifo-mfu.png" />
-
 ---
 
 ## Conclusion
@@ -109,4 +87,4 @@ Generated with Matplotlib:
 This project is licensed under the MIT License.
 
 ## Author
-Roman Sushkin  
+Nikkilodeonee 

@@ -106,7 +106,7 @@ def plot_results(x_vals, fifo_vals, mfu_vals, xlabel, title):
     ax.bar(x - width/2, fifo_vals, width, label='FIFO', color='skyblue')
     ax.bar(x + width/2, mfu_vals, width, label='MFU', color='salmon')
 
-    ax.set_ylabel('Liczba błędów strony')
+    ax.set_ylabel('Number of Page Faults')
     ax.set_xlabel(xlabel)
     ax.set_title(title)
     ax.set_xticks(x)
@@ -119,25 +119,25 @@ def plot_results(x_vals, fifo_vals, mfu_vals, xlabel, title):
 
 def print_table(title, column_name, x_vals, fifo_vals, mfu_vals):
     print(f"\n{title}")
-    print(f"{column_name:<20} {'FIFO - błędy':<15} {'MFU - błędy':<15}")
+    print(f"{column_name:<20} {'FIFO - faults':<15} {'MFU - faults':<15}")
     for i in range(len(x_vals)):
         print(f"{str(x_vals[i]):<20} {str(fifo_vals[i]):<15} {str(mfu_vals[i]):<15}")
 
 
-# Eksperyment 1: różna długość sekwencji
+# Experiment 1: different sequence lengths
 lengths = [50, 100, 150, 200, 250]
 x1, fifo1, mfu1 = run_experiment(lengths, fixed_param=0.6, param_type="length")
-plot_results(x1, fifo1, mfu1, "Długość sekwencji", "Porównanie FIFO i MFU dla różnych długości sekwencji\n(ramki=3, lokalność=0.6, strony=0-9)")
-print_table("Porównanie FIFO i MFU dla różnych długości sekwencji", "Długość sekwencji", x1, fifo1, mfu1)
+plot_results(x1, fifo1, mfu1, "Sequence Length", "FIFO vs MFU for different sequence lengths\n(frames=3, locality=0.6, pages=0-9)")
+print_table("FIFO vs MFU for different sequence lengths", "Sequence Length", x1, fifo1, mfu1)
 
-# Eksperyment 2: różna liczba ramek
+# Experiment 2: different number of frames
 frames = [2, 3, 4, 5, 6]
 x2, fifo2, mfu2 = run_experiment(frames, fixed_param=0.6, param_type="frames")
-plot_results(x2, fifo2, mfu2, "Liczba ramek", "Porównanie FIFO i MFU dla różnej liczby ramek\n(sekwencja=200, lokalność=0.6, strony=0-9)")
-print_table("Porównanie dla różnej liczby ramek", "Liczba ramek", x2, fifo2, mfu2)
+plot_results(x2, fifo2, mfu2, "Number of Frames", "FIFO vs MFU for different number of frames\n(sequence=200, locality=0.6, pages=0-9)")
+print_table("Comparison for different number of frames", "Number of Frames", x2, fifo2, mfu2)
 
-# Eksperyment 3: różny poziom lokalności
+# Experiment 3: different locality levels
 localities = [0.1, 0.3, 0.5, 0.7, 0.9]
 x3, fifo3, mfu3 = run_experiment(localities, fixed_param=3, param_type="locality")
-plot_results(x3, fifo3, mfu3, "Poziom lokalności", "Porównanie FIFO i MFU dla różnych poziomów lokalności\n(ramki=3, sekwencja=200, strony=0-9)")
-print_table("Porównanie dla różnych poziomów lokalności", "Poziom lokalności", x3, fifo3, mfu3)
+plot_results(x3, fifo3, mfu3, "Locality Factor", "FIFO vs MFU for different locality levels\n(frames=3, sequence=200, pages=0-9)")
+print_table("Comparison for different locality levels", "Locality Factor", x3, fifo3, mfu3)

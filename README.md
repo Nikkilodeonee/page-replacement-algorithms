@@ -1,20 +1,112 @@
-# Page Replacement Algorithms Simulator
+# Page Replacement Simulation: FIFO vs MFU
 
-## Description
-This project simulates and compares two classic page replacement algorithms used in operating system memory management: FIFO (First In, First Out) and MFU (Most Frequently Used). It models how pages are accessed and replaced in limited memory frames and studies how these algorithms perform under various parameters like sequence length, frame count, and locality of page references.
+![Python](https://img.shields.io/badge/Python-3.10-blue.svg)  
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Features
-- Object-oriented implementation of FIFO and MFU algorithms.
-- Generation of randomized page access sequences simulating locality.
-- Experimental framework running multiple tests with varying parameters.
-- Visual bar charts comparing page fault counts.
-- Console tables summarizing experimental results.
+## Overview
+This project implements and compares two fundamental **page replacement algorithms** used in memory management:
+- **FIFO (First In First Out)**
+- **MFU (Most Frequently Used)**
 
-## How to Run
-1. Ensure Python 3 is installed.
-2. Install dependencies: `pip install matplotlib numpy`
-3. Run the script `Algorytmy-zastepowania-stron.py`.
-4. View plots and printed tables for analysis.
+The program simulates memory accesses with controlled locality, evaluates page faults and hits, and visualizes results with **Matplotlib**.
+
+---
+
+## Key Features
+- Simulation of **page replacement** with configurable parameters.  
+- Modular object-oriented design with reusable classes.  
+- Experiments with:
+  - Sequence length  
+  - Number of frames  
+  - Locality factor  
+- Tabular results with per-experiment page fault counts.  
+- Side-by-side **bar chart comparisons** of FIFO vs MFU.  
+
+---
+
+## Algorithms Explained
+
+### FIFO (First In First Out)
+- **Description**: Replaces the page that has been in memory the longest (oldest).  
+- **Pros**: Very simple, predictable.  
+- **Cons**: Ignores frequency/locality of access, may cause many page faults.  
+
+### MFU (Most Frequently Used)
+- **Description**: Removes the page with the **highest access count**, assuming it has “served its purpose.”  
+- **Pros**: Tries to discard overused pages.  
+- **Cons**: Counterintuitive — may remove pages still needed, often worse than FIFO in practice.  
+
+---
+
+## Code Structure
+- **`PageReplacementSimulator`** – base class (frames, stats, abstract access method).  
+- **`FIFO`** – queue-based page replacement strategy.  
+- **`MFU`** – frequency-based page replacement strategy.  
+- **`generate_page_sequence()`** – creates random page access sequences with adjustable locality.  
+- **`run_experiment()`** – runs controlled experiments, averages results.  
+- **`plot_results()`** – visualization of comparisons.  
+- **`print_table()`** – formatted tabular results.  
+
+---
+
+## Getting Started
+
+### Install dependencies
+```bash
+pip install matplotlib numpy
+```
+
+### Run the simulation
+```bash
+python main.py
+```
+
+This will:
+- Print page fault comparison tables in the console.  
+- Show bar charts comparing **FIFO** and **MFU** results.  
+
+---
+
+## Customization
+You can adjust:
+- **Sequence length**  
+- **Number of frames**  
+- **Locality factor**  
+- **Repetitions** for averaging  
+
+Example:
+```python
+lengths = [50, 100, 150, 200, 250]
+x, fifo, mfu = run_experiment(lengths, fixed_param=0.6, param_type="length")
+```
+
+---
+
+## Example Results
+
+From experiments with **sequence length = 200**, **frames = 3**, **locality = 0.6**:
+
+| Setting              | FIFO (page faults) | MFU (page faults) |
+|-----------------------|---------------------|-------------------|
+| Length = 200         | 97                  | 112               |
+| Frames = 3           | 100                 | 110               |
+| Locality = 0.7       | 86                  | 102               |
+
+### Example Output  
+Generated with Matplotlib:  
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/example-fifo-mfu.png" />
+
+---
+
+## Conclusion
+- **FIFO** is simple and generally performs better in practice.  
+- **MFU** can perform worse under high locality due to its replacement policy.  
+- Increasing the **number of frames** reduces page faults for both algorithms.  
+
+---
+
+## License
+This project is licensed under the MIT License.
 
 ## Author
-Nikkilodeonee
+Roman Sushkin  

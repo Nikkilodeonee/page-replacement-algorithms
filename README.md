@@ -76,6 +76,12 @@ You can adjust:
 
 ---
 
+<img width="1242" height="748" alt="image" src="https://github.com/user-attachments/assets/8f3d7733-44ff-4ceb-9498-a4f824696bd1" />
+<img width="1251" height="749" alt="image" src="https://github.com/user-attachments/assets/cd9613ad-598a-45f7-854d-857badb72bd0" />
+<img width="1246" height="748" alt="image" src="https://github.com/user-attachments/assets/50aa6f91-eb7c-4751-b1b7-7fca83837dd3" />
+
+---
+
 ## Conclusion
 - **FIFO** is simple and generally performs better in practice.  
 - **MFU** can perform worse under high locality due to its replacement policy.  

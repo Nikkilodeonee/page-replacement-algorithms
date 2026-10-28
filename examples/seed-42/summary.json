@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "parameters": {
+    "source": "generated",
+    "frames": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "length": 200,
+    "repetitions": 30,
+    "seed": 42,
+    "pages": 10,
+    "locality": 0.6
+  },
+  "summary": [
+    {
+      "frames": 2,
+      "algorithm": "FIFO",
+      "repetitions": 30,
+      "mean_faults": 113.26666666666667,
+      "stdev_faults": 7.908674126348968,
+      "mean_fault_rate": 0.5663333333333334
+    },
+    {
+      "frames": 2,
+      "algorithm": "MFU",
+      "repetitions": 30,
+      "mean_faults": 124.93333333333334,
+      "stdev_faults": 8.2417496189589,
+      "mean_fault_rate": 0.6246666666666667
+    },
+    {
+      "frames": 2,
+      "algorithm": "LRU",
+      "repetitions": 30,
+      "mean_faults": 111.5,
+      "stdev_faults": 7.767083507140666,
+      "mean_fault_rate": 0.5575
+    },
+    {
+      "frames": 2,
+      "algorithm": "OPT",
+      "repetitions": 30,
+      "mean_faults": 94.56666666666666,
+      "stdev_faults": 6.5741569976602365,
+      "mean_fault_rate": 0.4728333333333333
+    },
+    {
+      "frames": 3,
+      "algorithm": "FIFO",
+      "repetitions": 30,
+      "mean_faults": 98.66666666666667,
+      "stdev_faults": 8.188862635578143,
+      "mean_fault_rate": 0.49333333333333335
+    },
+    {
+      "frames": 3,
+      "algorithm": "MFU",
+      "repetitions": 30,
+      "mean_faults": 108.4,
+      "stdev_faults": 9.891131520641139,
+      "mean_fault_rate": 0.542
+    },
+    {
+      "frames": 3,
+      "algorithm": "LRU",
+      "repetitions": 30,
+      "mean_faults": 96.83333333333333,
+      "stdev_faults": 8.62267793163143,
+      "mean_fault_rate": 0.4841666666666667
+    },
+    {
+      "frames": 3,
+      "algorithm": "OPT",
+      "repetitions": 30,
+      "mean_faults": 70.96666666666667,
+      "stdev_faults": 5.397849720879177,
+      "mean_fault_rate": 0.35483333333333333
+    },
+    {
+      "frames": 4,
+      "algorithm": "FIFO",
+      "repetitions": 30,
+      "mean_faults": 84.8,
+      "stdev_faults": 8.184931487085024,
+      "mean_fault_rate": 0.424
+    },
+    {
+      "frames": 4,
+      "algorithm": "MFU",
+      "repetitions": 30,
+      "mean_faults": 91.9,
+      "stdev_faults": 9.600107758015909,
+      "mean_fault_rate": 0.4595
+    },
+    {
+      "frames": 4,
+      "algorithm": "LRU",
+      "repetitions": 30,
+      "mean_faults": 83.73333333333333,
+      "stdev_faults": 8.602058026940448,
+      "mean_fault_rate": 0.4186666666666667
+    },
+    {
+      "frames": 4,
+      "algorithm": "OPT",
+      "repetitions": 30,
+      "mean_faults": 54.5,
+      "stdev_faults": 4.3687763614714505,
+      "mean_fault_rate": 0.2725
+    },
+    {
+      "frames": 5,
+      "algorithm": "FIFO",
+      "repetitions": 30,
+      "mean_faults": 71.4,
+      "stdev_faults": 7.078866069335272,
+      "mean_fault_rate": 0.357
+    },
+    {
+      "frames": 5,
+      "algorithm": "MFU",
+      "repetitions": 30,
+      "mean_faults": 74.36666666666666,
+      "stdev_faults": 8.876483201301545,
+      "mean_fault_rate": 0.37183333333333335
+    },
+    {
+      "frames": 5,
+      "algorithm": "LRU",
+      "repetitions": 30,
+      "mean_faults": 70.86666666666666,
+      "stdev_faults": 6.548141791343574,
+      "mean_fault_rate": 0.35433333333333333
+    },
+    {
+      "frames": 5,
+      "algorithm": "OPT",
+      "repetitions": 30,
+      "mean_faults": 41.9,
+      "stdev_faults": 3.536509091141169,
+      "mean_fault_rate": 0.2095
+    },
+    {
+      "frames": 6,
+      "algorithm": "FIFO",
+      "repetitions": 30,
+      "mean_faults": 58.733333333333334,
+      "stdev_faults": 6.307813071669645,
+      "mean_fault_rate": 0.2936666666666667
+    },
+    {
+      "frames": 6,
+      "algorithm": "MFU",
+      "repetitions": 30,
+      "mean_faults": 60.96666666666667,
+      "stdev_faults": 8.409696100677309,
+      "mean_fault_rate": 0.30483333333333335
+    },
+    {
+      "frames": 6,
+      "algorithm": "LRU",
+      "repetitions": 30,
+      "mean_faults": 57.43333333333333,
+      "stdev_faults": 5.7875212568810985,
+      "mean_fault_rate": 0.2871666666666667
+    },
+    {
+      "frames": 6,
+      "algorithm": "OPT",
+      "repetitions": 30,
+      "mean_faults": 32.266666666666666,
+      "stdev_faults": 2.715642215697451,
+      "mean_fault_rate": 0.16133333333333333
+    }
+  ]
+}

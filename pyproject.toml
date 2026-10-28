@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "page-replacement-algorithms"
+version = "1.0.0"
+description = "Paired FIFO, MFU, LRU, and optimal page-replacement experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Roman Sushkin"}]
+dependencies = []
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.8,<4"]
+dev = ["ruff>=0.14,<1", "build>=1,<2", "setuptools>=77", "wheel"]
+
+[project.scripts]
+page-sim = "page_replacement.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Nikkilodeonee/page-replacement-algorithms"
+
+[tool.setuptools.packages.find]
+include = ["page_replacement*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]

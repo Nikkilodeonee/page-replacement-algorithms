@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "parameters": {
+    "source": "examples\\belady.txt",
+    "frames": [
+      3,
+      4
+    ],
+    "length": 12,
+    "repetitions": 1,
+    "seed": null,
+    "pages": null,
+    "locality": null
+  },
+  "summary": [
+    {
+      "frames": 3,
+      "algorithm": "FIFO",
+      "repetitions": 1,
+      "mean_faults": 9,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.75
+    },
+    {
+      "frames": 3,
+      "algorithm": "MFU",
+      "repetitions": 1,
+      "mean_faults": 10,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.8333333333333334
+    },
+    {
+      "frames": 3,
+      "algorithm": "LRU",
+      "repetitions": 1,
+      "mean_faults": 10,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.8333333333333334
+    },
+    {
+      "frames": 3,
+      "algorithm": "OPT",
+      "repetitions": 1,
+      "mean_faults": 7,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.5833333333333334
+    },
+    {
+      "frames": 4,
+      "algorithm": "FIFO",
+      "repetitions": 1,
+      "mean_faults": 10,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.8333333333333334
+    },
+    {
+      "frames": 4,
+      "algorithm": "MFU",
+      "repetitions": 1,
+      "mean_faults": 7,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.5833333333333334
+    },
+    {
+      "frames": 4,
+      "algorithm": "LRU",
+      "repetitions": 1,
+      "mean_faults": 8,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.6666666666666666
+    },
+    {
+      "frames": 4,
+      "algorithm": "OPT",
+      "repetitions": 1,
+      "mean_faults": 6,
+      "stdev_faults": 0.0,
+      "mean_fault_rate": 0.5
+    }
+  ]
+}

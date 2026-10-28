@@ -1,0 +1,49 @@
+algorithm,position,page,hit,evicted,frames
+FIFO,0,1,False,,1
+FIFO,1,2,False,,1 2
+FIFO,2,3,False,,1 2 3
+FIFO,3,4,False,1,2 3 4
+FIFO,4,1,False,2,1 3 4
+FIFO,5,2,False,3,1 2 4
+FIFO,6,5,False,4,1 2 5
+FIFO,7,1,True,,1 2 5
+FIFO,8,2,True,,1 2 5
+FIFO,9,3,False,1,2 3 5
+FIFO,10,4,False,2,3 4 5
+FIFO,11,5,True,,3 4 5
+MFU,0,1,False,,1
+MFU,1,2,False,,1 2
+MFU,2,3,False,,1 2 3
+MFU,3,4,False,1,2 3 4
+MFU,4,1,False,2,1 3 4
+MFU,5,2,False,1,2 3 4
+MFU,6,5,False,2,3 4 5
+MFU,7,1,False,3,1 4 5
+MFU,8,2,False,1,2 4 5
+MFU,9,3,False,2,3 4 5
+MFU,10,4,True,,3 4 5
+MFU,11,5,True,,3 4 5
+LRU,0,1,False,,1
+LRU,1,2,False,,1 2
+LRU,2,3,False,,1 2 3
+LRU,3,4,False,1,2 3 4
+LRU,4,1,False,2,1 3 4
+LRU,5,2,False,3,1 2 4
+LRU,6,5,False,4,1 2 5
+LRU,7,1,True,,1 2 5
+LRU,8,2,True,,1 2 5
+LRU,9,3,False,5,1 2 3
+LRU,10,4,False,1,2 3 4
+LRU,11,5,False,2,3 4 5
+OPT,0,1,False,,1
+OPT,1,2,False,,1 2
+OPT,2,3,False,,1 2 3
+OPT,3,4,False,3,1 2 4
+OPT,4,1,True,,1 2 4
+OPT,5,2,True,,1 2 4
+OPT,6,5,False,4,1 2 5
+OPT,7,1,True,,1 2 5
+OPT,8,2,True,,1 2 5
+OPT,9,3,False,1,2 3 5
+OPT,10,4,False,2,3 4 5
+OPT,11,5,True,,3 4 5
